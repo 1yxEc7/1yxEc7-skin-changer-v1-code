@@ -1,11 +1,14 @@
 -- ================= Key 驗證系統 =================
-local CORRECT_KEY = "1yxEc7" -- 請把這裡改成你想設定的密碼
-local USER_KEY = script Key
+local CORRECT_KEY = "1yxEc7" -- 正確的密碼
+
+-- 讀取全域變數 _G.script_key
+local USER_KEY = _G.script_key 
 
 if USER_KEY ~= CORRECT_KEY then
     print("Error: 錯誤的金鑰，無權使用此腳本！")
-    return -- 終止後續腳本執行
+    return 
 end
+-- ================================================
 -- ================================================
 
 -- 下面是你原本的混淆程式碼（完全不動它）
