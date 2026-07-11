@@ -1,13 +1,14 @@
 -- ================= Key 驗證系統 =================
 local CORRECT_KEY = "1yxEc7" -- 正確的密碼
 
--- 讀取全域變數 _G.script_key
-local USER_KEY = _G.script_key 
+-- 同時相容 _G.script_key 與普通的 script_key 宣告
+local USER_KEY = _G.script_key or script_key or shared.script_key
 
 if USER_KEY ~= CORRECT_KEY then
     print("Error: 錯誤的金鑰，無權使用此腳本！")
     return 
 end
+-- ================================================
 -- ================================================
 -- ================================================
 
