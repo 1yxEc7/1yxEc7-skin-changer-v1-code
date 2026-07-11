@@ -1,6 +1,6 @@
 -- ================= Key 驗證系統 =================
 local CORRECT_KEY = "1yxEc7" -- 請把這裡改成你想設定的密碼
-local USER_KEY = "請使用者在這邊輸入Key" -- 使用者填寫 Key 的地方
+local USER_KEY = script Key
 
 if USER_KEY ~= CORRECT_KEY then
     print("Error: 錯誤的金鑰，無權使用此腳本！")
