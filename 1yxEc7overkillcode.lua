@@ -1,5 +1,5 @@
 -- ================= Key 驗證系統 =================
-local CORRECT_KEY = "你的自訂Key放這裡" -- 請把這裡改成你想設定的密碼
+local CORRECT_KEY = "1yxEc7" -- 請把這裡改成你想設定的密碼
 local USER_KEY = "請使用者在這邊輸入Key" -- 使用者填寫 Key 的地方
 
 if USER_KEY ~= CORRECT_KEY then
