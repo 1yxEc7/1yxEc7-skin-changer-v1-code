@@ -1,13 +1,23 @@
--- ================= Key 驗證系統 =================
-local CORRECT_KEY = "1yxEc7" -- 正確的密碼
+-- [[ 1. 使用者輸入區域 ]]
+script_key = "請在這裡輸入你的Key" 
 
--- 同時相容 _G.script_key 與普通的 script_key 宣告
-local USER_KEY = _G.script_key or script_key or shared.script_key
+-- [[ 2. Key 驗證系統（放置於主要腳本最上方） ]]
+local CORRECT_KEY = "1yxEc7" -- 你設定的正確密碼
+
+-- 檢查使用者是否有輸入 Key，並相容各種宣告方式
+local USER_KEY = script_key or _G.script_key or shared.script_key
 
 if USER_KEY ~= CORRECT_KEY then
     print("Error: 錯誤的金鑰，無權使用此腳本！")
-    return 
+    return -- 終止執行後面的程式碼
 end
+
+-- [[ 3. 你的主要腳本內容（驗證成功後才會執行） ]]
+print("驗證成功！正在啟動主要腳本...")
+-- 把你原本的 Hack/Cheat/Tool 腳本內容全部接在下面
+-- 範例：
+-- loadstring(game:HttpGet("..."))()
+
 -- ================================================
 -- ================================================
 -- ================================================
